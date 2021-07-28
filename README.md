@@ -1,5 +1,5 @@
 # IoT Owl
-<img alt="owl" src="owl2.png" style="width:30%;"></img>  
+<img alt="owl" src="owl2.png" width="200"></img>  
 IoT owl is light face detection and recognition system made for small IoT devices like raspberry pi.
 
 ## Versions
