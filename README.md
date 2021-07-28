@@ -14,7 +14,7 @@ Heavy version:
 1. Raspberry pi analyzes every video frame streamed from the camera
 2. If program detects faces in the frame collects next 10  frames (in the default config, you can change this value) and choice best one then crop face from the best frame
 3. \[optional\] detects mask on the face
-4.  Sends cropped face to Microsoft API to encode face and get information about it (for example: hair color, emotion, checks is mask put correctly for all option check bellow)
+4.  Sends cropped face to Microsoft API to encode face and get information about it (for example: hair color, emotions, whether the mask is put correctly, all available options below)
 5.  Sends returned token with detected face to recognition person
 6.  Check information about student in local database by returned from cloud person id
 
@@ -32,7 +32,7 @@ Minimal for heavy version:
 	* 10MB - CVlib
 	* 22MB - Matplotlib
 	* 200MB - OpenCV
-	* 1200MB - Tensorflow
+	* 1200MB - Tensorflow  
 	total: 1463MB
  
  
@@ -62,7 +62,8 @@ ________________________
 Setup:  
 1. You **have to** set in configuration file:
 - [microsoft API key](https://azure.microsoft.com/en-us/services/cognitive-services/face/)
-- Microsoft endpoint links with parameters  - IP of the camera or number if it's connected directly to PC (default is "0")  
+- Microsoft endpoint links with parameters  
+- IP of the camera or number if it's connected directly to PC (default is "0")  
 2. Download requirements from "requirements.txt"
 3. In main file import:
  - `faceDetection.win_face_detection`
