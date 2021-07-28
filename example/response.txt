@@ -1,0 +1,263 @@
+#################################################
+#      examples of json passed to function      #
+#################################################
++------------------------------+
+|      recognized student      |
++------------------------------+
+[
+    [
+        {
+            "confidence": 0.5445673,
+            "faceAttributes": {
+                "accessories": [],
+                "emotion": {
+                    "anger": 0.0,
+                    "contempt": 0.001,
+                    "disgust": 0.0,
+                    "fear": 0.0,
+                    "happiness": 0.902,
+                    "neutral": 0.098,
+                    "sadness": 0.0,
+                    "surprise": 0.0
+                },
+                "facialHair": {
+                    "beard": 0.1,
+                    "moustache": 0.1,
+                    "sideburns": 0.1
+                },
+                "glasses": "NoGlasses",
+                "smile": 0.902
+            },
+            "faceId": "0d56aee7-946e-4450-b1b5-563b5266b125",
+            "faceRectangle": {
+                "height": 138,
+                "left": 44,
+                "top": 60,
+                "width": 138
+            },
+            "recognitionModel": "recognition_01",
+            "userData": "<json or csv here >"
+        }
+    ]
+]
++--------------------------+
+|      with face mask      |
++--------------------------+
+[
+    [
+        {
+            "confidence": 0.78242,
+            "faceAttributes": {
+                "headPose": {
+                    "pitch": -2.0,
+                    "roll": -2.1,
+                    "yaw": 18.7
+                },
+                "mask": {
+                    "noseAndMouthCovered": false,
+                    "type": "otherMaskOrOcclusion"
+                }
+            },
+            "faceId": "66388a5c-af86-488e-8319-b7010c782a92",
+            "faceRectangle": {
+                "height": 202,
+                "left": 41,
+                "top": 52,
+                "width": 148
+            },
+            "recognitionModel": "recognition_04"
+        }
+    ]
+]
+
+
+
+
+
+
+
+##########################################
+#      Microsoft face API responses      #
+##########################################
+
++------------------------------------+
+|      detect face without mask      |
++------------------------------------+
+[
+    {
+        "faceAttributes": {
+            "accessories": [],
+            "emotion": {
+                "anger": 0.0,
+                "contempt": 0.001,
+                "disgust": 0.0,
+                "fear": 0.0,
+                "happiness": 0.001,
+                "neutral": 0.986,
+                "sadness": 0.012,
+                "surprise": 0.0
+            },
+            "facialHair": {
+                "beard": 0.1,
+                "moustache": 0.1,
+                "sideburns": 0.1
+            },
+            "glasses": "NoGlasses",
+            "smile": 0.001
+        },
+        "faceId": "23f5206c-d227-42fa-8068-7e0e3d6ece18",
+        "faceRectangle": {
+            "height": 134,
+            "left": 30,
+            "top": 68,
+            "width": 134
+        },
+        "recognitionModel": "recognition_01"
+    }
+]
+
++---------------------------------+
+|      "findsimilars" result      |
++---------------------------------+
+[{"persistedFaceId":"95722f06-a7c6-46ba-a9cc-140bb41f5be5","confidence":0.6970754}]
+
++--------------------------------+
+|      record from database      |
++--------------------------------+
+{'persistedFaceId': '95722f06-a7c6-46ba-a9cc-140bb81f5be1', 'userData': 'Filip;Poplewski'}
+
+
+##########################
+#      next example      #
+##########################
+
+
++---------------------------------+
+|      detect face with mask      |
++---------------------------------+
+[
+    {
+        "faceAttributes": {
+            "headPose": {
+                "pitch": 16.3,
+                "roll": -5.4,
+                "yaw": -16.3
+            },
+            "mask": {
+                "noseAndMouthCovered": true,
+                "type": "faceMask"
+            }
+        },
+        "faceId": "9e5dcf43-a01b-46a5-877e-f13566dcb6c7",
+        "faceRectangle": {
+            "height": 179,
+            "left": 41,
+            "top": 44,
+            "width": 138
+        },
+        "recognitionModel": "recognition_04"
+    }
+]
+
++---------------------------------+
+|      "findsimilars" result      |
++---------------------------------+
+[{"persistedFaceId":"cd0b9038-9bc4-4232-b08d-e1bd231d505b","confidence":0.61738}]
+
++--------------------------------+
+|      record from database      |
++--------------------------------+
+{'persistedFaceId': '95322f06-a1c6-46ba-a9bc-140bb81f5be5', 'userData': 'Filip;Poplewski'}
+
+
+
+##########################
+#      next example      #
+##########################
+
+
++---------------------------------+
+|      detect face with mask      |
+|      but nose is uncoverd       |
+|      and camera is blurred      |
++---------------------------------+
+[
+    {
+        "faceAttributes": {
+            "headPose": {
+                "pitch": 11.2,
+                "roll": 7.6,
+                "yaw": -2.8
+            },
+            "mask": {
+                "noseAndMouthCovered": false,
+                "type": "faceMask"
+            }
+        },
+        "faceId": "21fdcd8f-fa91-4ea3-8795-19b003b37d21",
+        "faceRectangle": {
+            "height": 192,
+            "left": 40,
+            "top": 10,
+            "width": 149
+        },
+        "recognitionModel": "recognition_04"
+    }
+]
+
++---------------------------------+
+|      "findsimilars" result      |
++---------------------------------+
+[{"persistedFaceId":"cd0b9038-9be4-4232-b08d-e8bc231d505b","confidence":0.7006}]
+
++--------------------------------+
+|      record from database      |
++--------------------------------+
+{'persistedFaceId': '95722f06-a736-46ba-a9cc-140qb81f5be5', 'userData': 'Filip;Poplewski'}
+
+
+
+
+
+##########################
+#      next example      #
+##########################
+
++---------------------------------+
+|      detect face with mask      |
+|      but nose is uncoverd       |
++---------------------------------+
+
+[
+    {
+        "faceAttributes": {
+            "headPose": {
+                "pitch": 2.6,
+                "roll": 0.6,
+                "yaw": -0.9
+            },
+            "mask": {
+                "noseAndMouthCovered": false,
+                "type": "faceMask"
+            }
+        },
+        "faceId": "e110a02a-e0ab-4f2c-ff96-e60be04131c0",
+        "faceRectangle": {
+            "height": 182,
+            "left": 36,
+            "top": 48,
+            "width": 139
+        },
+        "recognitionModel": "recognition_04"
+    }
+]
+
++---------------------------------+
+|      "findsimilars" result      |
++---------------------------------+
+[{"persistedFaceId":"cd0l9038-9bc4-4232-b09d-e8bc261d505c","confidence":0.86882}]
+
++--------------------------------+
+|      record from database      |
++--------------------------------+
+{'persistedFaceId': '85722f06-a7c6-46aa-a9cc-140bb81f5be5', 'userData': 'Filip;Poplewski'}

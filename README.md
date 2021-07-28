@@ -1,5 +1,5 @@
 # IoT Owl
-![logo](owl2.png)
+<img alt="owl" src="owl2.png" style="width:30%;"></img>  
 IoT owl is light face detection and recognition system made for small IoT devices like raspberry pi.
 
 ## Versions
@@ -133,10 +133,14 @@ if __name__ == "__main__":
                 "width": 138
             },
             "recognitionModel": "recognition_01",
-            "userData": "<json or csv here with information about user>"
+            "userData": "\"Filip\"\"Poplewski\"\"3iT\"\"10:11:2003\""
         }
     ]
 ]
+```
+```
+example greeting:
+["Good morning ['Filip']"]
 ````
 
 ```json
